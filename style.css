@@ -15,15 +15,21 @@
 
 main{
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+    margin: 50px 80px;
 }
+
 
 .text-area{
     border: none;
     color: #0A3871;
-    margin-top: 90px;
+    /* margin-top: 90px; */
     text-transform: lowercase;
+    
     resize: none;
 }
 
@@ -33,17 +39,16 @@ main{
 }
 
 .mensaje{
+    /* position: relative; */
     background: white;
     background-image: url(imagenes/Muñeco.png);
+    background-position: center;
     background-repeat: no-repeat;
     border: none;
     border-radius: 24px;
     color: #0A3871;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
-    position: fixed;
-    resize: none;
+    height: 100%;
+
 }
 
 .mensaje:focus{
@@ -77,17 +82,37 @@ main{
 }
 
 .btn-copiar{
+    position: absolute;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
-    width: 336px;
+    width: 100%; 
+    display: none;
+    bottom: 10px;
+    z-index: 1; 
 }
 
 .informacion{
     font-size: 14px;
+}
+
+textarea {
+    width: 100%;
+    height: 50%;
+    resize: none;
+}
+
+section{
+    height: 70vh;
+}
+
+.section-encriptador{
+    /* position: relative; */
+    align-content: space-evenly;
+}
+
+.section-mensaje{
+    position: relative;
 }

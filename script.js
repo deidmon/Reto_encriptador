@@ -1,6 +1,7 @@
 
 const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
+const btnCopiar = document.querySelector('.btn-copiar');
 
 /* La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -13,6 +14,7 @@ function btnEncriptar(){
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
+    btnCopiar.style.display = "block";
 }
 
 function encriptar(stringEncriptado){
