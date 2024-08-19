@@ -2,6 +2,7 @@
 const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
 const btnCopiar = document.querySelector('.btn-copiar');
+const mensajeAdvertencia = document.querySelector('.mensaje-error');
 
 /* La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -15,6 +16,7 @@ function btnEncriptar(){
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
     btnCopiar.style.display = "block";
+    mensajeAdvertencia.style.display = "none";
 }
 
 function encriptar(stringEncriptado){
@@ -49,9 +51,13 @@ function desencriptar(stringDesencriptado){
  
 
 function copiarContenido(){
-   
-    /* var textarea = document.getElementsByClassName("mensaje")[0]; 
-    var texto = textarea.value; // Obtiene el contenido del textarea */
     let texto = mensaje.value
     navigator.clipboard.writeText(texto)
+}
+
+function validarTextoIngresado(){
+    if (textArea.value != ""){
+        btnEncriptar()
+    };
+    return
 }
